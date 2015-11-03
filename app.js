@@ -6,24 +6,33 @@ var pikePlace = {
   maxCustHr: 88,
   avgPerCust: 5.2,
   hourlySales: [],
+  dailyTotal: 0,
 
   calcRandCust: function() {
     return Math.floor(Math.random() * (this.maxCustHr - this.minCustHr + 1)) + this.minCustHr;
   },
   calcHourlySales: function() {
     for (var i = 0; i < hours.length; i++) {
-      this.hourlySales.push(Math.floor(this.avgPerCust * this.calcRandCust()));
+      var hrly = Math.floor(this.avgPerCust * this.calcRandCust());
+      this.hourlySales.push(hrly)
+      this.dailyTotal += hrly;
     }
   },
   makeList: function() {
     this.calcHourlySales();
-    var ul = document.createElement('ul');
+    var ulElem = document.createElement('ul');
     for (var i = 0; i < hours.length; i++) {
       var li = document.createElement('li');
       li.textContent = hours[i] + ': ' + this.hourlySales[i];
-      ul.appendChild(li);
+      ulElem.appendChild(li);
     }
-    document.body.appendChild(ul);
+    document.body.appendChild(ulElem);
+    //Create an element
+    //Add content to the element
+    //append the element to the DOM
+      // li.textContent = hrly[i] + ': ' + this.dailyTotal[i];
+      // ulElem.appendChild(li);
+
   }
 };
 
