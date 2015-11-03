@@ -7,16 +7,31 @@ var pikePlace = {
   avgPerCust: 5.2,
   hourlySales: [],
 
-calcRandCust: function() {
-  return Math.floor(Math.random() * (this.maxCustHr - this.minCustHr + 1)) + this.minCustHr;
+  calcRandCust: function() {
+    return Math.floor(Math.random() * (this.maxCustHr - this.minCustHr + 1)) + this.minCustHr;
   },
-calcHourlySales: function() {
-  return Math.floor(this.avgPerCust * this.calcRandCust());
+  calcHourlySales: function() {
+    for (var i = 0; i < hours.length; i++) {
+      this.hourlySales.push(Math.floor(this.avgPerCust * this.calcRandCust()));
+    }
   },
+  makeList: function() {
+    this.calcHourlySales();
+    var ul = document.createElement('ul');
+    for (var i = 0; i < hours.length; i++) {
+      var li = document.createElement('li');
+      li.textContent = hours[i] + ': ' + this.hourlySales[i];
+      ul.appendChild(li);
+    }
+    document.body.appendChild(ul);
+  }
 };
-for (var i = 0; i < hours.length; i++) {
-  pikePlace.hourlySales.push(pikePlace.calcHourlySales())
-}
 
+pikePlace.calcHourlySales()
+console.log(pikePlace.hourlySales)
 
-console.log(pikePlace.calcRandCust(pikePlace.minCustHr, pikePlace.maxCustHr));
+// for (var i >= 0; i < pikePlace.hourlySales.length; i++) {
+//   0[i]
+// };
+
+// console.log(pikePlace.calcRandCust(pikePlace.minCustHr, pikePlace.maxCustHr));
