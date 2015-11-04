@@ -53,11 +53,16 @@ var bellevueSquare = new CookieStand("Bellevue Square Mall", 20, 48, 3.3);
 var alki = new CookieStand("Alki Beach", 3, 24, 2.6);
 
 var tbl = document.createElement('table');
+var headerRow = document.createElement('thead');
+for (var i = 0; i < hours.length; i++) {
+  var td = document.createElement('td');
+  td.innerHTML = hours[i];
+  headerRow.appendChild(td);
+};
+tbl.appendChild(headerRow);
 pikePlace.displayData();
 seaTac.displayData();
 southCenter.displayData();
 bellevueSquare.displayData();
 alki.displayData();
 document.body.appendChild(tbl);
-
-
