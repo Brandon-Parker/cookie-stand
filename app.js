@@ -74,9 +74,12 @@ for (var i = 0; i < locations.length; i++){
 
 displayAllLocations();
 
+
+
 // function updateLocation(){
-//   pikePlace.avgPerCust = 0;
-//   displayAllLocations();
-// }
+//  harvest field data via event. target.minCust.value
+//  put that into the constructor
+  //   displayAllLocations();
+  // }
 
 // updateLocation();
