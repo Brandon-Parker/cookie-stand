@@ -8,19 +8,20 @@ function CookieStand(storeLocations, minCustHr, maxCustHr, avgPerCust) {
   this.hourlySales = [];
   this.dailyTotal = 0;
   locations.push(this);
+};
 
-  this.custCalc = function() {
+  CookieStand.prototype.custCalc = function() {
     return Math.floor(Math.random() * (this.maxCustHr - this.minCustHr + 1)) + this.minCustHr;
   };
 
-  this.calcHourlySales = function() {
+  CookieStand.prototype.calcHourlySales = function() {
     for (var i = 0; i < hours.length; i++) {
       this.hourlySales.push(Math.floor(this.avgPerCust * this.custCalc()));
       this.dailyTotal += this.hourlySales[i];
     }
   };
 
-  this.displayData = function() {
+  CookieStand.prototype.displayData = function() {
     this.calcHourlySales();
 
     var row = document.createElement('tr');
@@ -39,8 +40,8 @@ function CookieStand(storeLocations, minCustHr, maxCustHr, avgPerCust) {
       row.appendChild(totalCookies);
       tbl.appendChild(row);
   }
-};
 
+//Variables for the DOM access
 var pikePlace = new CookieStand("Pike Place Market", 17, 88, 5.2);
 var seaTac = new CookieStand("SeaTac Airport", 6, 44, 1.2);
 var southCenter = new CookieStand("South Center Mall", 11, 38, 1.9);
