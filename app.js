@@ -41,7 +41,14 @@ function CookieStand(storeLocations, minCustHr, maxCustHr, avgPerCust) {
       tbl.appendChild(row);
   }
 
-//Variables for the DOM access
+////////////Variables for the DOM access
+var newLocation = document.getElementById('storeLocation');
+var minCust = document.getElementById('minCust');
+var maxCust = document.getElementById('maxCust');
+var avgCookies = document.getElementById('avgCookies');
+var chatForm = document.getElementById('chat-form');
+
+///////////////////////////CookieStand Information
 var pikePlace = new CookieStand("Pike Place Market", 17, 88, 5.2);
 var seaTac = new CookieStand("SeaTac Airport", 6, 44, 1.2);
 var southCenter = new CookieStand("South Center Mall", 11, 38, 1.9);
@@ -72,9 +79,33 @@ for (var i = 0; i < locations.length; i++){
   }
   document.body.appendChild(tbl);
 }
-
 displayAllLocations();
 
+var handleNewEntrySubmit = function(event) {
+console.log(handleNewEntrySubmit);
+  event.preventDefault();
+
+   if (!event.target.newLocation.value || !event.target.minCust.value || !event.target.maxCust.value || !event.target.avgCookies.value) {
+    return alert('Fields cannot be empty!');
+   }
+
+var stand = event.target.newLocation.value;
+var min = event.target.minCust.value;
+var max = event.target.maxCust.value;
+var average = Number(event.target.avgCookies.value);
+var newShop = new CookieStand(stand, min, max, average);
+   console.log(newShop);
+
+ event.target.newLocation.value = null;
+ event.target.maxCust.value = null;
+ event.target.minCust.value = null;
+ event.target.avgCookies.value = null;
+
+newShop.displayData();
+locations.push(newShop);
+};
+
+chatForm.addEventListener('submit', handleNewEntrySubmit);
 
 
 // function updateLocation(){
