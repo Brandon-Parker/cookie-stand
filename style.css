@@ -1,0 +1,56 @@
+body {
+  background-color: #9BC1BC
+}
+
+header {
+  background-color: #ED6A5A
+}
+
+#brand {
+  text-align: center;
+}
+
+#motto {
+  text-align: center;
+  font-style: italic;
+  border-top: dashed 1px black;
+  border-bottom: dashed 1px black;
+}
+
+#openingSalmon {
+  width: 15%;
+  position: absolute;
+  top: 20px;
+  left: 10px;
+}
+
+#fancyFish{
+  width: 25%
+}
+
+#family {
+  width: 35%
+}
+
+div {
+  height: 90%;
+  width: 75%;
+  background-color: #F4F1BB;
+}
+
+figcaption {
+  font-style: italic;
+  font-family: Georgia, Times, serif;
+  word-wrap: true;
+  width: 325px;
+  border-top: 1px solid black;
+  border-bottom: 1px solid black;
+}
+
+h3 {
+  font-style: oblique;
+}
+
+a {
+  font-size: 24px
+}
