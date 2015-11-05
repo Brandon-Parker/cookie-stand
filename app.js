@@ -97,8 +97,8 @@ var newShop = new CookieStand(stand, min, max, average);
    console.log(newShop);
 
  event.target.newLocation.value = null;
- event.target.maxCust.value = null;
  event.target.minCust.value = null;
+ event.target.maxCust.value = null;
  event.target.avgCookies.value = null;
 
 newShop.displayData();
