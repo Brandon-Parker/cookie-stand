@@ -1,0 +1,105 @@
+body {
+  background-color: #9BC1BC
+}
+
+header {
+  background: #ED6A5A;
+  color: rgba(255, 255, 255, 0.75);
+  cursor: default;
+  height: 3.25em;
+  left: 0;
+  line-height: 3.25em;
+  position: fixed;
+  text-align: right;
+  top: 0;
+  width: 100%;
+  z-index: 10001;
+}
+
+header > h1 {
+  color: #fff;
+  display: inline-block;
+  height: inherit;
+  left: 5%;
+  line-height: inherit;
+  margin: 0;
+  padding: 0;
+  position: absolute;
+  top: 0;
+}
+
+  header > h1 a {
+    font-size: 1em;
+  }
+
+
+#banner {
+  padding: 8em 0 6em 0;
+  background-attachment: fixed;
+  background-image: url("../images/stream.png");
+  background-size: cover;
+  text-align: center;
+}
+
+#brand {
+  text-align: center;
+}
+
+input[type="submit"] {
+    border: 1px solid #006633;
+    background-color: #009966;
+    color: #ffffff;
+    border-radius: 5px;
+    padding: 5px;
+    margin-top: 10px;
+    height: 50px;
+    width: 70px;
+}
+
+#motto {
+
+}
+
+#openingSalmon {
+  width: 15%;
+  position: relative;
+
+}
+
+#fancyFish{
+  width: 25%
+}
+
+#family {
+  width: 35%
+}
+
+div {
+  height: 90%;
+  width: 75%;
+  background-color: #F4F1BB;
+}
+
+figcaption {
+  font-style: italic;
+  font-family: Georgia, Times, serif;
+  word-wrap: true;
+  width: 325px;
+  border-top: 1px solid black;
+  border-bottom: 1px solid black;
+}
+
+h3 {
+  font-style: oblique;
+}
+
+#HomePage{
+  font-size: 18px;
+  text-align: left;
+}
+
+a {
+  font-size: 24px;
+  text-decoration: none;
+}
+
