@@ -56,7 +56,7 @@ input[type="submit"] {
     background-color: #009966;
     color: #ffffff;
     border-radius: 5px;
-    padding: 5px;
+    padding: 3px;
     margin-top: 10px;
     height: 50px;
     width: 70px;
@@ -82,6 +82,7 @@ input[type="submit"] {
   background-color: #5CA4A9;
   float: left;
   width: 100%;
+  text-align: center;
 }
 
 #fancyFish{
@@ -110,12 +111,48 @@ figcaption {
 }
 
 #merch{
-  margin: 10%;
+  margin: 0%;
+  margin-left: 5%;
+  margin-top: 5%;
   width: 50%;
   font-style: italic;
   font-family: Georgia, Times, serif;
   word-wrap: true;
   width: 325px;
+}
+
+
+.card-container {
+  cursor: pointer;
+  height: 150px;
+  perspective: 600;
+  position: relative;
+  width: 150px;
+}
+.card {
+  height: 100%;
+  position: absolute;
+  transform-style: preserve-3d;
+  transition: all 1s ease-in-out;
+  width: 100%;
+}
+.card:hover {
+  transform: rotateY(180deg);
+}
+.card .side {
+  backface-visibility: hidden;
+  border-radius: 6px;
+  height: 100%;
+  position: absolute;
+  overflow: hidden;
+  width: 100%;
+}
+.card .back {
+  background: #eaeaed;
+  color: #0087cc;
+  line-height: 150px;
+  text-align: center;
+  transform: rotateY(180deg);
 }
 
 h3 {
@@ -133,6 +170,7 @@ h3 {
     height: 70%;
   width: 50%;
   background-color: #F4F1BB;
+  font-family: 'Open Sans', sans-serif;
 }
 
 a {
